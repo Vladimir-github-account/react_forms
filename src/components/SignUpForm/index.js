@@ -50,7 +50,6 @@ class SignUpForm extends Component {
       };
       fetch( 'http://192.168.0.106:3000/authorization/sign_up', options )
           .then( response => console.log( response ) );
-      this._devClearInputs();
     } else {
       const state = _.clone( this.state );
       state.isPasswordMatch = false;
@@ -67,27 +66,6 @@ class SignUpForm extends Component {
       state.correctFields.set( field, pattern.test( value ) );
       this.setState( state );
     };
-  }
-
-  _devClearInputs() {
-    const correctFields = new Map();
-    correctFields
-        .set( 'firstName', false )
-        .set( 'lastName', false )
-        .set( 'email', false )
-        .set( 'password', false )
-        .set( 'confirmPassword', false );
-    this.setState( {
-                     data: {
-                       firstName: '',
-                       lastName: '',
-                       email: '',
-                       password: '',
-                       confirmPassword: '',
-                       correctFields
-                     },
-                     isPasswordMatch: true,
-                   } );
   }
 
   render() {
