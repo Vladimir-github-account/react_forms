@@ -1,0 +1,11 @@
+.input{
+    padding: 5px;
+}
+
+.valid{
+    border: 1px solid green;
+}
+
+.notValid{
+    border: 1px solid red;
+}
