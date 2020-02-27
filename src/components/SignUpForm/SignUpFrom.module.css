@@ -1,0 +1,17 @@
+.signUpForm {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 50px 40px 30px;
+}
+
+.signUpForm > * + * {
+    margin-top: 20px;
+}
+
+.signUpButton {
+    border-radius: 30px;
+    border: unset;
+    max-width: 90px;
+}

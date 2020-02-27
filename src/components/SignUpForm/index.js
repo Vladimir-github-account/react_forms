@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles               from './SignUpFrom.module.css';
 import _                    from 'lodash';
 import Input                from '../Input';
 import PasswordInput        from '../PasswordInput';
@@ -8,7 +9,12 @@ import {
   PASSWORD_PATTERN,
   USER_NAME_PATTERN
 }                           from '../../constants';
-import { mdiLockOutline, mdiAccountCircle, mdiEmailOutline, mdiAccountBox}   from '@mdi/js';
+import {
+  mdiLockOutline,
+  mdiAccountCircle,
+  mdiEmailOutline,
+  mdiAccountBox
+}                           from '@mdi/js';
 
 class SignUpForm extends Component {
   constructor(props) {
@@ -38,7 +44,7 @@ class SignUpForm extends Component {
     const { data, correctFields } = this.state;
     const body = JSON.stringify( _.omit( data, 'confirmPassword' ) );
     const isPasswordMatch = data.confirmPassword === data.password &&
-        data.password;
+                            data.password;
     let isEveryCorrect = true;
     correctFields.forEach( field => {
       if ( !field ) {
@@ -86,8 +92,7 @@ class SignUpForm extends Component {
     return (
         <form action="POST"
               onSubmit={this.submitHandler}
-
-        >
+              className={styles.signUpForm}>
           <Input type="text"
                  value={this.state.data.firstName}
                  icon={mdiAccountCircle}
@@ -132,7 +137,8 @@ class SignUpForm extends Component {
               placeholder="Verify Password"/>
           <input type="submit"
                  onSubmit={this.submitHandler}
-                 value="Sign Up"/>
+                 value="Sign Up"
+                 className={styles.signUpButton}/>
           <h1>Hello {text}</h1>
         </form>
     );

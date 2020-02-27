@@ -39,7 +39,7 @@ class PasswordInput extends Component {
         <div className={styles}>
           <div className='iconWrapper'>
             <Icon path={icon}
-                  size='18px'
+                  size='24px'
                   color='rgba(0,0,0,0.4)'/>
           </div>
           <input type={type}
@@ -50,9 +50,10 @@ class PasswordInput extends Component {
                  autoFocus={autoFocus}
                  className='passwordInput'
                />
-          <div className='iconWrapper'>
+          <div className='iconWrapper changeTypeIconWrapper'>
             <Icon path={mdiEye}
-                  size='16px'
+                  size='18px'
+                  color='rgba(0,0,0,0.7)'
                   onClick={this.changeType}/>
           </div>
         </div>

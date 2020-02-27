@@ -1,22 +1,24 @@
-.inputWrapper{
+.inputWrapper {
     display: flex;
-    border: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 5px;
 }
 
-.input{
+.input {
     border: unset;
     padding: 5px;
+    width: 100%;
 }
 
-.valid{
+.valid {
     border: 1px solid green;
 }
 
-.notValid{
+.notValid {
     border: 1px solid red;
 }
 
-.iconWrapper{
+.iconWrapper {
     display: flex;
     align-items: center;
 }

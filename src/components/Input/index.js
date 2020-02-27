@@ -21,7 +21,7 @@ function Input(props) {
       <div className={styles}>
         <div className='iconWrapper'>
           <Icon path={icon}
-                size='18px'
+                size='24px'
                 color='rgba(0,0,0,0.4)'/>
         </div>
         <input type={type}
